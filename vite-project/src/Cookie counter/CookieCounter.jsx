@@ -16,16 +16,16 @@ function CookieCounter() {
     <div className={styles.cookieCounter}>
       <h1>{count}</h1>
       <img
-        src="{`${import.meta.env.BASE_URL}cookie.png"
+        src={`${import.meta.env.BASE_URL}cookie.png`} 
         alt="Cookie"
         onClick={handleClick}
         className={styles.cookieButton}
       />
       <img 
-      src="{`${import.meta.env.BASE_URL}cookiemonster.png" 
+      src={`${import.meta.env.BASE_URL}cookiemonster.png`} 
       alt="the cookie monster"
       onClick={resetClick}
-      className={resetClick}
+      className={styles.cookieButton}
       />
     </div>
   );
