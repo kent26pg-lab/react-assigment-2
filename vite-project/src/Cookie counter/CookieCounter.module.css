@@ -21,8 +21,38 @@
     display: block;
 }
 
+img {
+    * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+}
+
+}
 
 .cookieCounter h1 {
   font-size: 4rem;
   margin: 0;
+}
+
+.speechBubble {
+  position: relative;
+  background: white;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 1rem;
+}
+
+.speechBubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 30px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: black transparent transparent;
 }
