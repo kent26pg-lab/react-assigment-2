@@ -15,6 +15,11 @@
   user-select: none;
 }
 
+.cookieResetButton {
+    width: 500px;
+    height: 500px;
+}
+
 
 .cookieCounter h1 {
   font-size: 4rem;

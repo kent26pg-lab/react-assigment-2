@@ -25,7 +25,7 @@ function CookieCounter() {
       src={`${import.meta.env.BASE_URL}cookiemonster.png`} 
       alt="the cookie monster"
       onClick={resetClick}
-      className={styles.cookieButton}
+      className={styles.cookieResetButton}
       />
     </div>
   );
