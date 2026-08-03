@@ -1,43 +1,36 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 80vh;
+  align-items: flex-end;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffd97a, #ff9a5c);
+  overflow: hidden;
 }
 
 .cookieCounter {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  padding: 2rem;
-  padding-top: 0;
+  gap: 8px;
   font-family: sans-serif;
-  width: 150px;
-  height: 200px;
-  bottom: -80px;
-}
-
-.cookieCounter h1 {
-  font-size: 4rem;
-  margin: 0;
 }
 
 .cookieButton {
-  width: 150px;
+  position: relative;
+  width: 120px;
   cursor: pointer;
-  user-select: none;
 }
 
 .cookieResetButton {
-  width: 500px;
-  height: 500px;
-  display: block;
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
 }
 
 .speechBubble {
@@ -45,10 +38,12 @@ body {
   background: white;
   border: 2px solid black;
   border-radius: 12px;
-  padding: 10px 16px;
-  font-size: 1rem;
-  left: 90px;
-  bottom: -60px;
+  padding: 8px 14px;
+  font-size: 14px;
+  width: 200px;
+  min-height: 40px;
+  bottom: -40px;
+  left: 60px;
 }
 
 .speechBubble::after {
