@@ -6,11 +6,12 @@ function CookieCounter() {
 
   function handleClick() {
     setCount(count + 1);
+    setShowBubble(false);
   }
 
   function resetClick() {
-    setCount(0);
     setLastCount(count);
+    setCount(0);
     setShowBubble(true);
   }
 
