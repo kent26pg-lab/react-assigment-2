@@ -3,10 +3,14 @@ import styles from "./CookieCounter.module.css";
 
 function CookieCounter() {
   const [count, setCount] = useState(0);
+  const [showBubble, setShowBubble] = useState(false);
+  const [lastCount, setLastCount] = useState(0);
+  const [isFirstLoad, setIsFirstLoad] = useState(true);
 
   function handleClick() {
     setCount(count + 1);
     setShowBubble(false);
+    setIsFirstLoad(false);
   }
 
   function resetClick() {
@@ -15,11 +19,8 @@ function CookieCounter() {
     setShowBubble(true);
   }
 
-  const [showBubble, setShowBubble] = useState(false);
-  const [lastCount, setLastCount] = useState(0);
   return (
     <div className={styles.cookieCounter}>
-      <h1>{count}</h1>
       <img
         src={`${import.meta.env.BASE_URL}cookie.png`}
         alt="Cookie"
@@ -28,7 +29,9 @@ function CookieCounter() {
       />
 
       {!showBubble && (
-        <div className={styles.speechBubble}>Kan jeg få {count}? </div>
+        <div className={styles.speechBubble}>
+          {isFirstLoad ? "Hei! Klikk på kjeksen 🍪" : `Kan jeg få ${count} kjeks?`}
+        </div>
       )}
 
       {showBubble && (

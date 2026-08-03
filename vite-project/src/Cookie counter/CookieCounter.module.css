@@ -1,12 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
 .cookieCounter {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   padding: 2rem;
+  padding-top: 0;
   font-family: sans-serif;
   width: 150px;
   height: 200px;
+  bottom: -80px;
+}
+
+.cookieCounter h1 {
+  font-size: 4rem;
+  margin: 0;
 }
 
 .cookieButton {
@@ -16,26 +35,9 @@
 }
 
 .cookieResetButton {
-    width: 500px;
-    height: 500px;
-    display: block;
-}
-
-img {
-    * {
-  margin: 0;
-  padding: 0;
-}
-
-body {
+  width: 500px;
+  height: 500px;
   display: block;
-}
-
-}
-
-.cookieCounter h1 {
-  font-size: 4rem;
-  margin: 0;
 }
 
 .speechBubble {
@@ -45,6 +47,8 @@ body {
   border-radius: 12px;
   padding: 10px 16px;
   font-size: 1rem;
+  left: 90px;
+  bottom: -60px;
 }
 
 .speechBubble::after {
